@@ -1,0 +1,134 @@
+.footer {
+    background: black;
+    color: white;
+    padding: 60px 80px 40px 80px;
+}
+
+.footer__content {
+    padding-inline: 40px;
+    padding-top: 41px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer__links:last-child {
+   text-align: right;
+}
+
+.footer__links:last-child .footer__link {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 12px;
+}
+
+.footer__links .footer__link--email {
+    color: #47A4D2;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: white;    
+}
+
+.footer__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #FFFFFF;
+}
+
+.footer__label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__bottom-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+}
+
+.footer__text {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    vertical-align: middle;
+    color: #FFFFFFCC;
+}
+
+
+@media (max-width: 1024px){
+    .footer {
+        padding-inline: 20px;
+    }
+
+    .footer__content {
+        padding-inline: 0;
+    }
+
+    .footer__top {
+        flex-wrap: wrap;
+        gap: 48px;
+    }
+
+    .footer__info {
+        margin-bottom: 64px;
+    }
+}
+
+@media (max-width: 480px){
+    .footer__top {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .footer__links:last-child {
+        text-align: left;
+     }
+
+    .footer__links:last-child .footer__link {
+        justify-content: start;
+        gap: 12px;
+    }
+}

@@ -1,0 +1,101 @@
+.ad__content {
+    border-radius: 32px;
+    background: #EDF5FF;
+    padding: 48px 64px 48px 64px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    background-image: url('../../img/ad/ad_image.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    background-size: 400px;
+}
+
+.add__info {
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: start;
+    max-width: 730px;
+}
+
+.ad__title {
+    color: #282F3D;
+    font-family: Inter;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 100%;
+    vertical-align: middle;
+}
+
+.ad__description {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #282F3D;
+}
+
+.ad__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 430px;
+}
+
+.ad__btn {
+    width: 100%;
+    height: 52px;
+    font-family: Inter;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    line-height: 28px !important;
+    vertical-align: middle;
+    border-radius: 14px;
+}
+
+.ad__policy {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #282F3D;
+}
+
+.ad__link {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0%;
+}
+
+@media (max-width: 768px){
+    .ad {
+        padding-inline: 0px;
+    }
+    .ad__content {
+        flex-direction: column;
+        padding-bottom: 150px;
+        background-position: right bottom;
+        border-radius: 0px;
+        padding-inline: 20px;
+    }
+}
+
+

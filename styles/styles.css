@@ -1,0 +1,238 @@
+@import './header.css';
+@import './footer.css';
+@import './sections/preview.css';
+@import './sections/reviews.css';
+@import './sections/marketplaces.css';
+@import './sections/try.css';
+@import './sections/work.css';
+@import './sections/tariffs.css';
+@import './sections/calculator.css';
+@import './sections/ad.css';
+@import './sections/blog.css';
+@import './sections/faq.css';
+@import './sections/ref.css';
+@import './sections/videos.css';
+@import './sections/difference.css';
+
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+    font-variation-settings: "wght" 100;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+    font-variation-settings: "wght" 100;
+}
+
+:root {
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    --primary-color: #E86B35;
+    --secondary-color: #F4F6FC;
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: 'Inter', sans-serif;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+section {
+    min-height: 450px;
+    padding: 7.5rem;
+    display: flex;
+    gap: 80px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+label {
+    cursor: pointer;
+}
+
+input:placeholder-shown
+ {
+    text-overflow: ellipsis
+ }
+
+select option[value=""] {
+    display: none;
+}
+.btn {
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    padding: 0.5rem 0.6rem;
+    border-radius: 0.625rem;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:disabled {
+    background: #f4b59a;
+}
+
+.btn-primary:hover {
+    background-color: #c94208;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+.btn-secondary:hover {
+    background-color: #E2E6F5;
+}
+
+.logo {
+    width: 101px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.default__title {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    vertical-align: middle;
+    color: #282F3D;
+}
+
+.default__text {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    vertical-align: middle;
+}
+
+.default__container-title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.publish-btn {
+    width: fit-content;
+    display: flex;
+    margin: 0 auto;
+    width: 413px;
+    height: 52px;
+    font-family: Inter;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    line-height: 28px !important;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text__background-orange {
+    background: #ffe6e0;
+}
+
+.text__background-green {
+    background: #c7fac3;
+}
+
+.text__background-blue {
+    background: #d4e4ff;
+}
+
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+@media (max-width: 1024px) {
+    section {
+        gap: 40px !important;
+    }
+
+    .default__title {
+        font-family: Inter;
+        font-weight: 700 ;
+        font-size: 32px ;
+        line-height: 100% ;
+        vertical-align: middle ;
+    }
+
+    .default__text {
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        vertical-align: middle;
+    }
+
+}
+
+@media (max-width: 768px) {
+    section {
+        padding-inline: 20px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .logo {
+        width: 88px;
+        height: 28px;
+        object-fit: contain;
+    }
+    
+    .publish-btn {
+        width: 100%;
+        height: auto;
+        font-family: Inter;
+        font-weight: 600;
+        font-size: 14px !important;
+        line-height: 28px !important;
+        text-align: center;
+        vertical-align: middle;
+
+    }
+}

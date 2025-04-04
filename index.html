@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <title>Document</title>
+</head>
+<body>
+   <header class="header">
+        <nav class="header__nav">
+            <img loading="lazy" src="./img/logo.png" alt="Logo" class="header__logo logo">
+            <a class="header__link" href="#videos">Отзывы клиентов</a>
+            <a class="header__link" href="#blog">Наш блог</a>
+            <a class="header__link" href="#calculator">Калькулятор</a>
+        </nav>
+        <div class="header__actions">
+            <div class="header__socials">
+                <a href="https://wa.me/your_number" target="_blank" class="header__social header__social--whatsapp">
+                    <img loading="lazy" src="./img/contact/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://t.me/your_username" target="_blank" class="header__social header__social--telegram">
+                    <img loading="lazy" src="./img/contact/telegram.png" alt="Telegram">
+                </a>
+                <a href="#" class="header__social header__social--call" id="open-callback-modal">
+                    <img loading="lazy" src="./img/contact/call.png" alt="Call">
+                </a>
+                
+                <div id="callback-modal" class="modal">
+                    <div class="modal__content">
+                    <div class="modal__header">
+                        <h2 class="modal__title">Оставьте номер, и мы вам перезвоним</h2>
+                        <button id="close-callback-modal" class="modal__close"><img src="./img/Icon.png" alt="Закрыть"></button>
+                    </div>
+                    <p class="modal__text">Мы перезвоним в течение 10 минут. Ваши данные в безопасности.</p>
+                    <input type="tel" id="phone-input" class="modal__input" maxlength="18" placeholder="+7 (___) ___-__-__">
+                    <button class="modal__button btn btn-primary" id="consultBtn">Жду звонка</button>
+                    </div>
+                </div>
+  
+            </div>
+            <a target="_blank" href="https://app.harmex.ru/auth" class="btn btn-primary header__btn"><span class="header__btn-text">Войти</span> <img  loading="lazy" src="./img/auth.png" class="header__btn-image"></a>
+        </div>
+    </header>
+
+   <section class="preview" id="preview">
+        <div class="preview__content">
+            <h2 class="default__title">Безопасные <span class="text__background-orange">самовыкупы</span> на 20+ маркетплейсах</h2>
+            <p class="default__text">Harmex помогает совершать автоматизированные <span class="text__background-green">самовыкупы, публиковать отзывы и повышать рейтинг карточки до 4.9</span> с помощью 10 000 реальных аккаунтов без подозрительной активности и без ошибок человеческого фактора.</p>
+            <div class="preview__buttons">
+                <a href="#work" class="btn btn-secondary preview__button">Как это работает</a>
+                <a href="https://app.harmex.ru/auth" target="_blank" class="btn btn-primary preview__button">Опубликовать 10 отзывов за 1 рубль <img loading="lazy" src="./img/arrow-right.png" class="preview__arrow" alt="Arrow"></a>
+            </div>
+        </div>
+        <img class="preview__image" loading="lazy" src="./img/preview.png" alt="Изображение с отзывом">
+    </section>
+
+    <section class="reviews" id="reviews">
+        <div class="default__container-title reviews__header">
+            <h2 class="default__title">
+                Пользователи Harmex совершили самовыкупов и опубликовали более 
+                <span class="text__background-blue">1 000 000 отзывов с 2022 года</span> — НИ одной санкции и блокировки
+            </h2>
+            <p class="default__text">
+                Платформа работает в соответствии с законом РФ
+            </p>
+        </div>
+        <div class="reviews__content">
+            <div class="reviews__cards">
+                <div class="reviews__card reviews__card--purple">
+                    <div class="reviews__card-icon">
+                        <img loading="lazy" src="./img/reviews/userIcon.png" alt="Иконка пользователя">
+                    </div>
+                    <p class="reviews__card-title">Пользователи<br> Harmex</p>
+                    <p class="reviews__card-value">5.000+</p>
+                </div>
+                <div class="reviews__card reviews__card--green">
+                    <div class="reviews__card-icon">
+                        <img loading="lazy" src="./img/reviews/thunderIcon.png" alt="Иконка молнии">
+                    </div>
+                    <p class="reviews__card-title">Самовыкупов и отзывов за 2024</p>
+                    <p class="reviews__card-value">400.000+</p>
+                </div>
+                <div class="reviews__card reviews__card--yellow">
+                    <div class="reviews__card-icon">  
+                        <img loading="lazy" class="reviews__card-image" src="./img/reviews/communityIcon.png" alt="Иконка сообщества">
+                    </div>
+                    <p class="reviews__card-title">Маркетплейсов<br><span class="reviews__invisible">&#8203;</span></p>
+                    <p class="reviews__card-value">20+</p>
+                </div>
+            </div>
+    
+             <div class="reviews__slider slider">
+                <div class="slider__track">
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">Нужно было 3000+ выкупов в месяц. Другие сервисы ломались. Harmex отработал как часы + скидка 10%. Финансы в безопасности — товары не залеживаются.</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/10.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Максим</p>
+                                <p class="slider__author-prof">Крупный поставщик электроники</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">После ручных выкупов на WB наложили штрафы и забрали СПП. Harmex вывел новый аккаунт в ТОП за 2 недели с рейтингом 4.9 — без единой санкции. Это магия!</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/1.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Дмитрий</p>
+                                <p class="slider__author-prof">Продажи косметики, 8 месяцев с Harmex</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">Раньше платила студентам за отзывы — получала ИЗМИР и слив бюджета. С Harmex карточки держатся в топе 3 месяца, а отзывы выглядят как живые. Наконец-то автомат, а не лотерея!</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/2.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Ольга</p>
+                                <p class="slider__author-prof">Оптовые поставки на Ozon</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">Боялся, что алгоритмы Яндекс.Маркета съедят мой товар. 50 выкупов через Harmex — и я на первой странице! Поддержка объяснила каждый шаг, теперь только с вами.</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/3.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Артем</p>
+                                <p class="slider__author-prof">Запуск бренда одежды</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">Мои KPI зависели от рейтинга. После ручных накруток карточку сняли. Harmex вернул позиции + 120 отзывов за месяц. Босс доволен — я сплю спокойно.</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/4.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Алина</p>
+                                <p class="slider__author-prof">E-commerce менеджер</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">WB оштрафовал меня на 50к за "самовыкупы". Harmex сделал всё по белым методам — товар в топе, штрафов нет. Выкупили 300 единиц — ни одной претензии!</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/5.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Сергей</p>
+                                <p class="slider__author-prof">Производство аксессуаров</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">Платил агентствам — получал блокировки. В Harmex всё прозрачно: вижу, кто и когда выкупает. 2 месяца — и мой санкционированный аккаунт снова зарабатывает!</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/6.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Виктор</p>
+                                <p class="slider__author-prof">Ниша детских товаров</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">Самостоятельно заказывала отзывы — приходили боты с однотипным текстом и в одно время. Harmex генерирует уникальные отзывы. Конверсия в выкупы выросла с 54 до 83%!</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/7.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Елена</p>
+                                <p class="slider__author-prof">Продажи украшений</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">Другая платформа залила 100 фейковых лайков — карточку скрыли. Harmex восстановил репутацию: живые отзывы, постепенный рост. Маркетплейсы не видят подвоха!</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/8.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Иван</p>
+                                <p class="slider__author-prof">Ниша автотоваров</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">После 3-х блокировок через выкупы сервисом ботов за 20 000 рублей в месяц думала уходить с Ozon. Попробовал Harmex — 4 месяца без проблем, рейтинг 4.8, продажи x2. Теперь рекомендую партнерам</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/9.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Алиса</p>
+                                <p class="slider__author-prof">Товары для дома</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">Нужно было 3000+ выкупов в месяц. Другие сервисы ломались. Harmex отработал как часы + скидка 10%. Финансы в безопасности — товары не залеживаются.</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/10.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Максим</p>
+                                <p class="slider__author-prof">Крупный поставщик электроники</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">После ручных выкупов на WB наложили штрафы и забрали СПП. Harmex вывел новый аккаунт в ТОП за 2 недели с рейтингом 4.9 — без единой санкции. Это магия!</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/1.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Дмитрий</p>
+                                <p class="slider__author-prof">Продажи косметики, 8 месяцев с Harmex</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">Раньше платил студентам за отзывы — получал ИЗМИР и слив бюджета. С Harmex карточки держатся в топе 3 месяца, а отзывы выглядят как живые. Наконец-то автомат, а не лотерея!</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/2.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Ольга</p>
+                                <p class="slider__author-prof">Оптовые поставки на Ozon</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">Боялся, что алгоритмы Яндекс.Маркета съедят мой товар. 50 выкупов через Harmex — и я на первой странице! Поддержка объяснила каждый шаг, теперь только с вами.</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/3.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Артем</p>
+                                <p class="slider__author-prof">Запуск бренда одежды</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">Мои KPI зависели от рейтинга. После ручных накруток карточку сняли. Harmex вернул позиции + 120 отзывов за месяц. Босс доволен — я сплю спокойно.</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/4.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Алина</p>
+                                <p class="slider__author-prof">E-commerce менеджер</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">WB оштрафовал меня на 50к за "самовыкупы". Harmex сделал всё по белым методам — товар в топе, штрафов нет. Выкупили 300 единиц — ни одной претензии!</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/5.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Сергей</p>
+                                <p class="slider__author-prof">Производство аксессуаров</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">Платил агентствам — получал блокировки. В Harmex всё прозрачно: вижу, кто и когда выкупает. 2 месяца — и мой санкционированный аккаунт снова зарабатывает!</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/6.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Виктор</p>
+                                <p class="slider__author-prof">Ниша детских товаров</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">Самостоятельно заказывала отзывы — приходили боты с однотипным текстом и в одно время. Harmex генерирует уникальные отзывы. Конверсия в выкупы выросла с 54 до 83%!</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/7.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Елена</p>
+                                <p class="slider__author-prof">Продажи украшений</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">Другая платформа залила 100 фейковых лайков — карточку скрыли. Harmex восстановил репутацию: живые отзывы, постепенный рост. Маркетплейсы не видят подвоха!</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/8.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Иван</p>
+                                <p class="slider__author-prof">Ниша автотоваров</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img loading="lazy" src="./img/reviews/dots.png" alt="Изображение кавычек" width="20" height="20">
+                        <p class="slider__text">После 3-х блокировок через выкупы сервисом ботов за 20 000 рублей в месяц думала уходить с Ozon. Попробовал Harmex — 4 месяца без проблем, рейтинг 4.8, продажи x2. Теперь рекомендую партнерам</p>
+                        <div class="slider__author">
+                            <img loading="lazy" class="slider__author-img" src="./img/reviews/9.jpg"  alt="Фото пользователя">
+                            <div class="slider__author-info">
+                                <p class="slider__author-name">Алиса</p>
+                                <p class="slider__author-prof">Товары для дома</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            
+        </div>
+    </section>
+
+    <section class="marketplaces" id="marketplaces">
+        <h2 class="default__title">Популярные площадки для продвижения на Harmex</h2>
+        <div class="marketplaces__markets">
+            <img loading="lazy" src="./img/marketplaces/wb.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+            <img  loading="lazy" src="./img/marketplaces/ozon.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+            <img  loading="lazy" src="./img/marketplaces/avito.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+            <img  loading="lazy" src="./img/marketplaces/yandexMarket.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+            <img  loading="lazy" src="./img/marketplaces/flowwow.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+            <img  loading="lazy" src="./img/marketplaces/goldApple.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+            <img  loading="lazy" src="./img/marketplaces/lamoda.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+            <img  loading="lazy" src="./img/marketplaces/letual.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+            <img  loading="lazy" src="./img/marketplaces/vi.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+            <img  loading="lazy" src="./img/marketplaces/kaspi.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+            <img  loading="lazy" src="./img/marketplaces/uzum.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+        </div>
+        <div class="marketplaces__other">
+            <div class="marketplaces__markets">
+                <img loading="lazy" src="./img/marketplaces/booking.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+                <img loading="lazy" src="./img/marketplaces/ostrovok.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+                <img loading="lazy" src="./img/marketplaces/sutochno.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+                <img loading="lazy" src="./img/marketplaces/avito.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+                <img loading="lazy" src="./img/marketplaces/ozon.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+            </div>
+            <div class="marketplaces__markets">
+                <img loading="lazy" src="./img/marketplaces/maps.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+                <img loading="lazy" src="./img/marketplaces/yamaps.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+            </div>
+            <div class="marketplaces__markets">
+                <img loading="lazy" src="./img/marketplaces/tg.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+                <img loading="lazy" src="./img/marketplaces/twitch.png" width="80" height="80" alt="Widlberries" class="marketplaces__markets-card">
+            </div>
+        </div>
+    </section>
+  
+    <section class="tryIt" id="tryIt">
+        <div class="tryIt__content">
+            <div class="tryIt__coin-wrapper">
+                <img src="./img/try/coin.png" class="tryIt__coin" alt="Изображение монеты">
+            </div>
+            <div class="tryIt__text">
+                <h3 class="tryIt__title">Попробуйте 10&nbsp;самовыкупов за&nbsp;1&nbsp;рубль</h3>
+                <p class="tryIt__description">Зарегистрируйтесь на платформе и начните совершать самовыкупы уже сегодня. Мы гарантируем возврат финансов на баланс, если что-то пойдёт не так!</p>
+            </div>
+            <div class="tryIt__buttons">
+                <button class="btn btn-primary tryIt__btn">Попробовать 10 самовыкупов за 1 руб</button>
+                <p class="tryIt__policy">
+                    Нажимая на кнопку, вы принимаете <br>
+                    <a class="tryIt__link" target="_blank" href="./docs/oferta.pdf">условия обработки данных</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="difference" id="difference">
+        <h2 class="default__title">Самовыкупы Harmex ничем не отличаются от естественного поведения живых покупателей</h2>
+
+        <div class="difference__cards">
+            <div class="difference__card-double">
+                
+                <div class="difference__container">
+                    <div class="difference__card">
+                        <div class="difference__card-info">
+                            <img loading="lazy"` src="./img/diff/x-circle.png" class="difference__image" alt="Опасность">
+                            <p class="difference__card-text">Опасность</p>
+                        </div>
+                        <p class="difference__card-title">Выкупы и отзывы по дешевой цене</p>
+                        <p class="difference__card-description">Риск потери доступа к аккаунту, товару, финансам и бессонные ночи в ожидании решения ситуации. </p>
+                        <img loading="lazy" class="difference__card-image" src="./img/diff/1-.jpg" alt="Санкция">
+                    </div>
+                    <div class="difference__card">
+                        <div class="difference__card-info">
+                            <img loading="lazy" src="./img/diff/check-circle.png" class="difference__image" alt="Опасность">
+                            <p class="difference__card-text">Harmex</p>
+                        </div>
+                        <p class="difference__card-title">Выкупы и отзывы по дешевой цене</p>
+                        <p class="difference__card-description">Риск потери доступа к аккаунту, товару, финансам и бессонные ночи в ожидании решения ситуации. </p>
+                        <img loading="lazy" class="difference__card-image" src="./img/diff/1+.jpg" alt="Безопасноть">
+                    </div>
+                </div>
+                <div class="difference__container">    
+                    <div class="difference__card">
+                        <div class="difference__card-info">
+                            <img loading="lazy"` src="./img/diff/x-circle.png" class="difference__image" alt="Опасность">
+                            <p class="difference__card-text">Опасность</p>
+                        </div>
+                        <p class="difference__card-title">Выкупы и отзывы по дешевой цене</p>
+                        <p class="difference__card-description">Риск потери доступа к аккаунту, товару, финансам и бессонные ночи в ожидании решения ситуации. </p>
+                        <img loading="lazy" class="difference__card-image" src="./img/diff/2-.jpg" alt="Санкция">
+                    </div>
+                    <div class="difference__card">
+                        <div class="difference__card-info">
+                            <img loading="lazy" src="./img/diff/check-circle.png" class="difference__image" alt="Опасность">
+                            <p class="difference__card-text">Harmex</p>
+                        </div>
+                        <p class="difference__card-title">Выкупы и отзывы по дешевой цене</p>
+                        <p class="difference__card-description">Риск потери доступа к аккаунту, товару, финансам и бессонные ночи в ожидании решения ситуации. </p>
+                        <img loading="lazy" class="difference__card-image" src="./img/diff/2+.jpg" alt="Безопасноть">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="difference__card-double">
+                
+                <div class="difference__container">
+                    <div class="difference__card">
+                        <div class="difference__card-info">
+                            <img loading="lazy"` src="./img/diff/x-circle.png" class="difference__image" alt="Опасность">
+                            <p class="difference__card-text">Опасность</p>
+                        </div>
+                        <p class="difference__card-title">Выкупы и отзывы по дешевой цене</p>
+                        <p class="difference__card-description">Риск потери доступа к аккаунту, товару, финансам и бессонные ночи в ожидании решения ситуации. </p>
+                        <img loading="lazy" class="difference__card-image" src="./img/diff/3-.jpg" alt="Санкция">
+                    </div>
+                    <div class="difference__card">
+                        <div class="difference__card-info">
+                            <img loading="lazy" src="./img/diff/check-circle.png" class="difference__image" alt="Опасность">
+                            <p class="difference__card-text">Harmex</p>
+                        </div>
+                        <p class="difference__card-title">Выкупы и отзывы по дешевой цене</p>
+                        <p class="difference__card-description">Риск потери доступа к аккаунту, товару, финансам и бессонные ночи в ожидании решения ситуации. </p>
+                        <img loading="lazy" class="difference__card-image" src="./img/diff/3+.jpg" alt="Безопасноть">
+                    </div>
+                </div>
+                <div class="difference__container">    
+                    <div class="difference__card">
+                        <div class="difference__card-info">
+                            <img loading="lazy"` src="./img/diff/x-circle.png" class="difference__image" alt="Опасность">
+                            <p class="difference__card-text">Опасность</p>
+                        </div>
+                        <p class="difference__card-title">Выкупы и отзывы по дешевой цене</p>
+                        <p class="difference__card-description">Риск потери доступа к аккаунту, товару, финансам и бессонные ночи в ожидании решения ситуации. </p>
+                        <img loading="lazy" class="difference__card-image" src="./img/diff/4-.jpg" alt="Санкция">
+                    </div>
+                    <div class="difference__card">
+                        <div class="difference__card-info">
+                            <img loading="lazy" src="./img/diff/check-circle.png" class="difference__image" alt="Опасность">
+                            <p class="difference__card-text">Harmex</p>
+                        </div>
+                        <p class="difference__card-title">Выкупы и отзывы по дешевой цене</p>
+                        <p class="difference__card-description">Риск потери доступа к аккаунту, товару, финансам и бессонные ночи в ожидании решения ситуации. </p>
+                        <img loading="lazy" class="difference__card-image" src="./img/diff/4+.jpg" alt="Безопасноть">
+                    </div>
+                </div>
+            </div>
+            <div class="difference__card-solo">
+                <div class="difference__card">
+                    <div class="difference__card-info">
+                        <img loading="lazy" src="./img/diff/x-circle.png" class="difference__image" alt="Опасность">
+                        <p class="difference__card-text">Опасность</p>
+                    </div>
+                    <p class="difference__card-title">Выкупы и отзывы по дешевой цене</p>
+                    <p class="difference__card-description">Риск потери доступа к аккаунту, товару, финансам и бессонные ночи в ожидании решения ситуации. </p>
+                    <img loading="lazy" class="difference__card-image" src="./img/diff/5-.jpg" alt="Санкция">
+                </div>
+                <div class="difference__card">
+                    <div class="difference__card-info">
+                        <img loading="lazy" src="./img/diff/check-circle.png" class="difference__image" alt="Опасность">
+                        <p class="difference__card-text">Harmex</p>
+                    </div>
+                    <p class="difference__card-title">Выкупы и отзывы по дешевой цене</p>
+                    <p class="difference__card-description">Риск потери доступа к аккаунту, товару, финансам и бессонные ночи в ожидании решения ситуации. </p>
+                    <img loading="lazy" class="difference__card-image" src="./img/diff/5+.jpg" alt="Безопасноть">
+                </div>
+            </div>
+            
+        </div>
+        <a href="https://app.harmex.ru/auth" target="_blank" class="btn btn-primary publish-btn">Опубликовать 10 отзывов за 1 рубль <img loading="lazy" src="./img/arrow-right.png" class="preview__arrow" alt="Arrow"></a>
+
+    </section>
+
+    <section class="work" id="work">
+        <div class="default__container-title">
+            <h2 class="default__title">Итак…как это работает?</h2>
+            <p class="default__text">Узнайте, как начать свой путь с помощью наших интуитивно понятных инструментов.</p>
+        </div>
+
+        <video class="work__video" controls>
+            <source src="https://ozonmpportal.hb.vkcs.cloud/harmex/FINALFINALFINAL.mp4" type="video/mp4">
+            Ваш браузер не поддерживает элемент <code>video</code>.
+        </video>
+          
+
+        <div class="work__steps">
+            <div class="work__step">
+                <p class="work__step-title">
+                    Пополните баланс
+                </p>
+                <p class="work__step-description">
+                    Быстрое и безопасное пополнение счета любым удобным способом
+                </p>
+
+                <div class="work__step-image"></div>
+            </div>
+            <div class="work__step">
+                <p class="work__step-title">
+                    Выберите услугу
+                </p>
+                <p class="work__step-description">
+                    Самовыкупы, отзывы или комплексное продвижение на выбранном маркетплейсе                
+                </p>
+
+                <div class="work__step-image"></div>
+            </div>
+            <div class="work__step">
+                <p class="work__step-title">
+                    Создайте заказ
+                </p>
+                <p class="work__step-description">
+                    Укажите ссылку на товар и необходимые параметры для выкупа или отзыва   
+                </p>
+
+                <div class="work__step-image"></div>
+            </div>
+            <div class="work__step">
+                <p class="work__step-title">
+                    Получите отчетность
+                </p>
+                <p class="work__step-description">
+                    Отслеживайте статус заказов и получайте детальные отчеты о результатах
+                </p>
+
+                <div class="work__step-image"></div>
+            </div>
+        </div>
+
+        <a href="https://app.harmex.ru/auth" target="_blank" class="btn btn-primary publish-btn">Опубликовать 10 отзывов за 1 рубль <img loading="lazy" src="./img/arrow-right.png" class="preview__arrow" alt="Arrow"></a>
+
+        
+    </section>
+
+    <section class="tariffs" id="tariffs">
+        <div class="default__container-title tariffs__header">
+            <h2 class="default__title">Тарифные планы</h2>
+            <p class="default__text">Harmex предлагает гибкие и выгодные планы, которые позволяют вам заказывать только то, что нужно, и в том объеме, который подходит именно вам.</p>
+        </div>
+    
+        <div class="toggle-container">
+            <button class="toggle-btn active" data-category="marketplaces">Маркетплейсы</button>
+            <button class="toggle-btn" data-category="real_estate">Недвижимость</button>
+            <button class="toggle-btn" data-category="maps">Карты</button>
+        </div>
+    
+        <table class="tariff-table">
+            <thead>
+                <tr>
+                    <th>Площадка</th>
+                    <th>Самовыкуп</th>
+                    <th>Отзыв</th>
+                    <th>Скидка за объемы</th>
+                </tr>
+            </thead>
+            <tbody id="tariff-body">
+                
+            </tbody>
+        </table>
+        <div class="tariff-cards" id="tariff-cards"></div>
+    
+        <a href="https://app.harmex.ru/auth" target="_blank" class="btn btn-primary publish-btn">Опубликовать 10 отзывов за 1 рубль <img loading="lazy" src="./img/arrow-right.png" class="preview__arrow" alt="Arrow"></a>
+    </section> 
+
+    <section class="calculator" id="calculator">
+        <div class="default__container-title calculator__header">
+            <h2 class="default__title">Калькулятор стоимости</h2>
+            <p class="default__text">Рассчитайте стоимость услуг по самовыкупу и отзывам.</p>
+        </div>
+    
+        <div class="calculator__container">
+            <div class="calculator__inputs">
+                
+                <label class="select">
+                    <select class="calculator__select" id="platform-select">
+                        <option value="">Выберите площадку</option>
+                    </select>
+                    <span class="select__icon">▼</span>
+                </label>
+                
+            
+            
+                <input class="calculator__input" type="number" id="product-price" placeholder="Стоимость товара">
+            
+            
+                <input class="calculator__input" type="number" id="purchase-quantity" placeholder="Количество самовыкупов">
+                
+            </div>
+    
+            <div class="calculator__results">
+                <div class="calculator__result">
+                    <span class="calculator__result-label">Сумма за товар:</span>
+                    <strong class="calculator__result-value" id="total-product-price">0 ₽</strong>
+                </div>
+                <div class="calculator__result">
+                    <span class="calculator__result-label">Сумма за услугу:</span>
+                    <strong class="calculator__result-value" id="total-service-price">0 ₽</strong>
+                </div>
+                <div class="calculator__result calculator__result--total">
+                    <span class="calculator__result-label">Итого:</span>
+                    <strong class="calculator__result-value" id="total-price">0 ₽</strong>
+                </div>
+            </div>
+        </div>
+        <div class="calculator__bottom">
+            <a href="https://app.harmex.ru/auth" target="_blank" class="btn btn-primary publish-btn">Опубликовать 10 отзывов за 1 рубль <img loading="lazy" src="./img/arrow-right.png" class="preview__arrow" alt="Arrow"></a>
+            <p class="calculator__bottom-text">Сравните затраты на разных площадках, оцените эффективность вложений и распределите средства оптимальным образом для достижения максимальных результатов.</p>
+        </div>
+    </section>
+
+    <section class="videos" id="videos">
+        <h2 class="default__title">Отзывы участников</h2>
+        <div class="video__reviews">
+            <div class="video__review-wrapper slide slide-prev" data-video="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video1.mp4">
+                <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video1.png" class="video__review">
+                <div class="gradient"></div>
+            </div>
+            <div class="video__review-wrapper slide slide-active" data-video="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video2.mp4">
+                <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video2.png" class="video__review">
+                <div class="gradient"></div>
+            </div>
+
+            <div class="video__review-wrapper slide slide-next" data-video="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video3.mov">
+                <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video3.png" class="video__review">
+                <div class="gradient"></div>
+            </div>
+            <img src="./img/Button.png" class="video__watch" alt="Смотреть видео">
+        </div>
+          
+    </section>
+    
+
+    <div class="modal" id="videoModal">
+        <span class="close">&times;</span>
+        <video class="modal__video" controls id="modalVideo"></video>
+    </div>
+
+    <section class="ref">
+        <div class="ref__container">
+            <h2 class="ref__title">
+                Как получать самовыкупы и публиковать отзывы бесплатно с Harmex?
+            </h2>
+            <a class="ref__link" href="">Оплачивайте свои самовыкупы и отзывы бонусами за приглашение друга <img loading="lazy" src="./img/ref/arrow.png" class="preview__arrow" alt="Arrow"></a>
+        </div>
+
+        <img class="ref__image" alt="Уведомление пополнения баланса на Harmex" src="./img/ref/img.png" loading="lazy">
+    </section>
+
+    <section class="faq">
+        <h2 class="default__title">Остались вопросы?</h2>
+        <div class="accordion" id="accordion">
+            <div class="accordion-item">
+                <button class="accordion-btn" aria-expanded="true">
+                    Как быстро я увижу результат от покупки отзывов?
+                    <img class="icon" src="./img/accArrow.png">
+                </button>
+                <div class="accordion-panel">
+                    <p>Выкупы и отзывы вы можете заказать уже через 60 секунд. И опубликовать после 24 часов после завершения заказа - получение товара на ПВЗ или завершение брони.
+                    Первые результаты вы заметите уже через 2-3 дня после выполнения заказа.
+                    Полный эффект от накрутки отзывов проявляется в течение 1-2 недель, когда отзывы начинают появляться постепенно и естественно, вас замечают и покупают.
+                    Это позволяет избежать подозрений со стороны модерации площадки.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <button class="accordion-btn" aria-expanded="false">
+                    Насколько безопасна накрутка отзывов для магазина?
+                    <img class="icon" src="./img/accArrow.png">
+                </button>
+                <div class="accordion-panel">
+                    <p>Harmex использует только безопасные методы работы, которые имитируют поведение реальных покупателей.
+                    Все действия выполняются с разных номеров телефонов, IP-адресов, банковских карт и аккаунтов.
+                    Отзывы публикуются постепенно, с естественными временными промежутками, в которые вы захотите, чтобы заказ был выполнен.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <button class="accordion-btn" aria-expanded="false">
+                    Является ли накрутка отзывов легальной деятельностью?
+                    <img class="icon" src="./img/accArrow.png">
+                </button>
+                <div class="accordion-panel">
+                    <p>Накрутка отзывов находится в серой зоне законодательства. 
+                    Важно понимать, что это маркетинговый инструмент, который широко используется для продвижения.
+                    При правильном подходе и грамотной реализации риски минимальны.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <button class="accordion-btn" aria-expanded="false">
+                    Какие гарантии вы предоставляете?
+                    <img class="icon" src="./img/accArrow.png">
+                </button>
+                <div class="accordion-panel">
+                    <p>Мы гарантируем размещение согласованного количества отзывов в оговоренные сроки.
+                    В случае удаления отзывов модерацией, мы бесплатно восстанавливаем их через подачу спора в поддержку маркетплейса.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <button class="accordion-btn" aria-expanded="false">
+                    Можно ли заказать отзывы с фото и видео?
+                    <img class="icon" src="./img/accArrow.png">
+                </button>
+                <div class="accordion-panel">
+                    <p>Да, мы предоставляем услугу размещения отзывов с фото- и видеоконтентом.
+                    Это повышает доверие к отзывам и увеличивает конверсию. Контент создается профессионально и соответствует специфике товара.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <button class="accordion-btn" aria-expanded="false">
+                    Сколько отзывов рекомендуется заказывать для эффективного продвижения?
+                    <img class="icon" src="./img/accArrow.png">
+                </button>
+                <div class="accordion-panel">
+                    <p>Оптимальное количество отзывов зависит от категории товара и конкуренции в нише.
+                    Наши специалисты проводят анализ и дают индивидуальные рекомендации, в среднем на карточку нужно 50 выкупов. Важно соблюдать естественность и не перенасыщать карточку товара отзывами.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <button class="accordion-btn" aria-expanded="false">
+                    Можно ли указать конкретный текст отзыва?
+                    <img class="icon" src="./img/accArrow.png">
+                </button>
+                <div class="accordion-panel">
+                    <p>Да, вы можете предоставить свои тексты отзывов. Также наши копирайтеры могут написать уникальные отзывы с учетом особенностей вашего товара.
+                    Мы учитываем все пожелания по содержанию и тональности отзывов.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <button class="accordion-btn" aria-expanded="false">
+                    Как часто нужно заказывать накрутку отзывов?
+                    <img class="icon" src="./img/accArrow.png">
+                </button>
+                <div class="accordion-panel">
+                    <p>Периодичность заказа зависит от ваших целей и конкуренции в нише. Некоторым клиентам достаточно разового продвижения, другим требуется регулярное обновление отзывов.
+                    Наши специалисты помогут составить оптимальный план продвижения для вашего случая. Мы также предлагаем программы длительного сотрудничества.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    <section class="blog" id="blog">
+        <h1 class="blog__title">Наш блог</h1>
+        <div class="blog__articles-container" id="articles-container">
+            <div class="blog__loading-spinner" id="loading-spinner"></div>
+        </div>
+        <a href="https://t.me/harmexpro_bot" target="_blank"  class="blog__btn btn btn-primary">Перейти в Telegram-канал <img loading="lazy" src="./img/arrow-right.png" class="blog__arrow" alt="Arrow"></a>
+    </section>  
+    
+    <section class="ad" id="ad">
+        <div class="ad__content">
+            <div class="add__info">
+                <h2 class="ad__title">Попробуйте 10 самовыкупов за 1 рубль</h2>
+                <p class="ad__description">Зарегистрируйтесь на платформе и начните совершать самовыкупы уже сегодня.<br> Мы гарантируем возврат финансов на баланс, если что-то пойдёт не так!</p>
+                <div class="ad__buttons">
+                    <button class="btn btn-primary ad__btn">Попробовать 10 самовыкупов за 1 руб <img loading="lazy" src="./img/arrow-right.png" class="preview__arrow" /></button>
+                    <p class="ad__policy">
+                        Нажимая на кнопку, вы принимаете <br>
+                        <a class="ad__link" href="">условия обработки данных</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__top">
+                <div class="footer__info">
+                    <div class="footer__column">
+                        <img loading="lazy" src="./img/logoWhite.png" alt="logo" class="logo">
+                        <p class="footer__text">Безопасные выкупы и отзывы </p>
+                    </div>
+                    <div class="footer__column">
+                        <div class="header__socials">
+                            <a href="https://wa.me/your_number" target="_blank" class="header__social header__social--whatsapp">
+                                <img loading="lazy" src="./img/contact/whatsapp.png" alt="WhatsApp">
+                            </a>
+                            <a href="https://t.me/your_username" target="_blank" class="header__social header__social--telegram">
+                                <img loading="lazy" src="./img/contact/telegram.png" alt="Telegram">
+                            </a>
+                            <a href="#" class="header__social header__social--call" id="open-callback-modal-footer">
+                                <img loading="lazy" src="./img/contact/call.png" alt="Call">
+                            </a>
+                        </div>
+                        <p class="footer__text">В мессенджерах отвечаем за 1 минуту Telegram и WhatsApp</p>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <p class="footer__title">Ресурсы</p>
+                    <a href="#" class="footer__link">Блог</a>
+                    <a href="#" class="footer__link">Калькулятор</a>
+                </div>
+                <div class="footer__links">
+                    <p class="footer__title">Документы</p>
+                    <a class="footer__link" target="_blank" href="./docs/oferta.pdf">Пользовательское соглашение</a>
+                    <a class="footer__link" target="_blank" href="./docs/conf_policy.pdf">Политика конфиденциальности</a>
+                </div>
+                <div class="footer__links">
+                    <a class="footer__title" href="tel:8 (800) 550 90 30">8 (800) 550 90 30</a>
+                    <a id="tg" target="_blank" class="footer__link" href="https://t.me/harmex_bot">
+                        <img loading="lazy" src="./img/contact/telegram.png" alt="tg">
+                        Telegram-канал Harmex
+                    </a>
+                    <a href="mailto:info@harmex.ru" class="footer__link footer__link--email">info@harmex.ru</a>
+                </div>                    
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__text">© 
+                        <span id="year"></span>
+                     Все права защищены</p>
+                    <div class="footer__bottom-btn" onclick="scrollToTop()">
+                        <p>Наверх</p>
+                        <a href="#" class="btn btn-primary">
+                            <img loading="lazy" src="./img/arrow-narrow-up.png" alt="Arrow" />
+                        </a>
+                    </в>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+<script src="./script/sendEmail.js"></script>
+
+<script src="./script/accordion.js"></script>
+<script src="./script/calculate.js"></script>
+<script src="./script/blog.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".video__review-wrapper").forEach(wrapper => {
+        wrapper.addEventListener("click", function () {
+            const videoSrc = this.getAttribute("data-video");
+            const modal = document.getElementById("videoModal");
+            const modalVideo = document.getElementById("modalVideo");
+
+            if (!videoSrc) {
+                console.error("Ошибка: data-video отсутствует.");
+                return;
+            }
+
+            modal.style.display = "flex";
+            document.body.classList.add('no-scroll');
+            modalVideo.src = videoSrc;
+            modalVideo.play();
+        });
+    });
+
+    document.querySelector(".modal .close").addEventListener("click", function () {
+        const modal = document.getElementById("videoModal");
+        const modalVideo = document.getElementById("modalVideo");
+
+        modal.style.display = "none";
+        document.body.classList.add('no-scroll');
+        modalVideo.pause();
+        modalVideo.src = "";
+    });
+
+    document.getElementById("videoModal").addEventListener("click", function (e) {
+        if (e.target === this) {
+            this.style.display = "none";
+            const modalVideo = document.getElementById("modalVideo");
+            modalVideo.pause();
+            modalVideo.src = "";
+        }
+    });
+});
+
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+</script>
+</html>
