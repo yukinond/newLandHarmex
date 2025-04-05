@@ -25,6 +25,23 @@ const data = {
     ]
 };
 
+document.addEventListener("DOMContentLoaded", function () {
+    const input = document.getElementById('product-price');
+    const span = document.getElementById('price-display');
+  
+    function updateDisplay() {
+      const value = input.value;
+      if (value) {
+        span.textContent = `${value} ₽`;
+      } else {
+        span.textContent = 'Введите стоимость товара, ₽';
+      }
+    }
+  
+    input.addEventListener('input', updateDisplay);
+    updateDisplay(); 
+});
+
 function updateTable(category) {
     const tbody = document.getElementById("tariff-body");
     const cardsContainer = document.getElementById("tariff-cards");
@@ -33,7 +50,6 @@ function updateTable(category) {
     cardsContainer.innerHTML = "";
 
     data[category].forEach((row, index) => {
-        // Update table
         const tr = document.createElement("tr");
         tr.style.animationDelay = `${(index + 1) * 0.1}s`;
         row.forEach(cell => {
@@ -43,12 +59,10 @@ function updateTable(category) {
         });
         tbody.appendChild(tr);
 
-        // Update cards
         const card = document.createElement("div");
         card.className = "tariff__card";
         card.style.animationDelay = `${(index + 1) * 0.1}s`;
         
-        // Площадка
         const platformInfo = document.createElement("div");
         platformInfo.className = "tariff__card-info";
         platformInfo.innerHTML = `
@@ -56,15 +70,12 @@ function updateTable(category) {
             <p class="tariff__card-value">${row[0]}</p>
         `;
         
-        // Разделитель
         const divider = document.createElement("div");
         divider.className = "divider";
         
-        // Контейнер для остальных данных
         const cardContainer = document.createElement("div");
         cardContainer.className = "tariff__card-container";
         
-        // Самовыкуп
         const buyoutInfo = document.createElement("div");
         buyoutInfo.className = "tariff__card-info";
         buyoutInfo.innerHTML = `
@@ -72,7 +83,6 @@ function updateTable(category) {
             <p class="tariff__card-value">${row[1]}</p>
         `;
         
-        // Отзыв
         const reviewInfo = document.createElement("div");
         reviewInfo.className = "tariff__card-info";
         reviewInfo.innerHTML = `
@@ -80,7 +90,6 @@ function updateTable(category) {
             <p class="tariff__card-value">${row[2]}</p>
         `;
         
-        // Скидка
         const discountInfo = document.createElement("div");
         discountInfo.className = "tariff__card-info";
         discountInfo.innerHTML = `
@@ -88,7 +97,6 @@ function updateTable(category) {
             <p class="tariff__card-discount">${row[3]}</p>
         `;
         
-        // Собираем карточку
         cardContainer.appendChild(buyoutInfo);
         cardContainer.appendChild(reviewInfo);
         cardContainer.appendChild(discountInfo);
