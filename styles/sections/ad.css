@@ -1,4 +1,4 @@
-.ad__content {
+.test__content {
     /* border-radius: 32px;
     background: #EDF5FF;
     padding: 48px 64px 48px 64px; */
@@ -15,7 +15,7 @@
     background-size: 400px;*/
 } 
 
-.add__info {
+.test__info {
     padding-bottom: 48px;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
     max-width: 730px;
 }
 
-.ad__title {
+.test__title {
     color: #282F3D;
     font-family: Inter;
     font-weight: 700;
@@ -34,7 +34,7 @@
     vertical-align: middle;
 }
 
-.ad__description {
+.test__description {
     font-family: Inter;
     font-weight: 500;
     font-style: italic;
@@ -45,14 +45,14 @@
     color: #282F3D;
 }
 
-.ad__buttons {
+.test__buttons {
     display: flex;
     flex-direction: column;
     gap: 12px;
     max-width: 430px;
 }
 
-.ad__btn {
+.test__btn {
     width: 100%;
     height: 52px;
     font-family: Inter;
@@ -63,7 +63,7 @@
     border-radius: 14px;
 }
 
-.ad__policy {
+.test__policy {
     font-family: Inter;
     font-weight: 500;
     font-size: 14px;
@@ -73,7 +73,7 @@
     color: #282F3D;
 }
 
-.ad__link {
+.test__link {
     font-family: Inter;
     font-weight: 500;
     font-size: 14px;
@@ -89,7 +89,7 @@
     .ad {
         padding-inline: 0px;
     }
-    .ad__content {
+    .test__content {
         flex-direction: column;
         padding-bottom: 150px;
         background-position: right bottom;
