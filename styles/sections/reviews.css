@@ -313,6 +313,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .slider__track {
+        animation: scroll 160s linear infinite;
+    }
+}
+
 @media (max-width: 480px) {
     .reviews .default__title {
         max-width: 330px;

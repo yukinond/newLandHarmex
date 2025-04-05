@@ -34,7 +34,7 @@
     background: white;
     padding: 24px;
     border-radius: 24px;
-    counter-reset: step-counter;
+    /* counter-reset: step-counter; */
     overflow: hidden;
     height: 328px;
 }
@@ -52,28 +52,28 @@
 }
 
 .work__step-title::before {
-    content: counter(step-counter) ". "; 
     position: absolute;
     left: 0;
     top: 0;
     font-weight: bold;
 }
 
-.work__step:nth-of-type(1) {
-    counter-increment: step-counter 1;
+.work__step:nth-of-type(1) .work__step-title::before {
+    content: "1. "; 
 }
 
-.work__step:nth-of-type(2) {
-    counter-increment: step-counter 1;
+.work__step:nth-of-type(2) .work__step-title::before {
+    content: "2. ";
 }
 
-.work__step:nth-of-type(3) {
-    counter-increment: step-counter 1;
+.work__step:nth-of-type(3) .work__step-title::before {
+    content: "3. ";
 }
 
-.work__step:nth-of-type(4) {
-    counter-increment: step-counter 1;
+.work__step:nth-of-type(4) .work__step-title::before {
+    content: "4. ";
 }
+
 
 .work__step-description {
     color: #697696;

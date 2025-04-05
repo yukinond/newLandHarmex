@@ -41,7 +41,7 @@
 .difference__card {
     padding: 20px;
     background: #f4f6fc;
-    height: 418px;
+    min-height: 418px;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -107,5 +107,9 @@
 
     .difference__card-solo{
         max-width: 100%;
+    }
+
+    .difference__card-double .difference__container{
+        width: 100%;
     }
 }
