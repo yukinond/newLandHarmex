@@ -121,9 +121,13 @@
     .marketplaces__other > .marketplaces__markets:nth-of-type(3) {
         width: calc(50% - 16px);
     }
+    .marketplaces .default__title {
+        margin-bottom: 50px;
+    }
 }
 
 @media (max-width: 768px) {
+    
     .marketplaces__markets {
         padding: 32px;
     }

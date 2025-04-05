@@ -159,13 +159,6 @@
     width: 100%;
   }
   
-.display-text {
-    pointer-events: none;
-    position: absolute;
-    left: 0;
-    padding: 0 16px;
-    color: #282F3D;
-}
 
 .input-overlay {
     position: absolute;
@@ -187,6 +180,20 @@
     flex-direction: row;
     align-items: center;
 }
+
+.display-text {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    padding: 0 16px;
+    color: #757575;
+    transition: color 0.2s ease;
+  }
+  
+.display-text.active {
+    color: #282F3D;
+}
+  
 
 @media (max-width: 768px){
     .calculator__container {

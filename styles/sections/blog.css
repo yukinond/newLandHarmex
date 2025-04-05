@@ -55,7 +55,7 @@
 .blog__article-content {
     display: flex;
     flex-direction: column;
-    padding: 32px 16px;
+    padding: 32px 0px;
     gap: 12px;
 }
 
