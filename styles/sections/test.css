@@ -86,7 +86,7 @@
 }
 
 @media (max-width: 768px){
-    .ad {
+    .test {
         padding-inline: 0px;
     }
     .test__content {
