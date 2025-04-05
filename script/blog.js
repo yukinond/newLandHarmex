@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="blog__article-content">
                     <a target="_blank" href="https://harmex.ru/blog/${article.slug}" class="blog__article-title">${article.title}</a>
                     <p class="blog__article-description">${article.description}</p>
-                    <div class="blog__article-info">
+                </div>
+                <div class="blog__article-info">
                         <div class="blog__article-info-date"> 
                             <img src="./img/blog/calendar.png" alt="Calendar" class="blog__article-info-icon">
                             <p class="blog__article-info-text">${new Date(article.date).toLocaleDateString()}</p>
@@ -41,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             <img src="./img/blog/eye-line.png" alt="Calendar" class="blog__article-info-icon">
                             <p class="blog__article-info-text">${article.views}</p>
                         </div>
-                    </div>
                 </div>
             `;
 
