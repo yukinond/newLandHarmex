@@ -49,16 +49,21 @@ document.addEventListener('DOMContentLoaded', function () {
   function nextSlide() {
     if (currentIndex < totalSlides - 1) {
       currentIndex++
-      updateSlider()
+    } else {
+      currentIndex = 0
     }
+    updateSlider()
   }
-
+  
   function prevSlide() {
     if (currentIndex > 0) {
       currentIndex--
-      updateSlider()
+    } else {
+      currentIndex = totalSlides - 1
     }
+    updateSlider()
   }
+  
 
   nextBtn.addEventListener('click', nextSlide)
   prevBtn.addEventListener('click', prevSlide)

@@ -28,7 +28,6 @@ window.addEventListener('click', (e) => {
   if (e.target === modal) {
     modal.style.display = 'none';
     document.body.classList.remove('no-scroll'); 
-    console.log('remove')
   }
 });
 
