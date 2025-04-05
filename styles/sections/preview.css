@@ -39,6 +39,19 @@
     margin-left: 12px;
 }
 
+@media (min-width: 1024px) and ( max-width: 1300px) {
+    .preview {
+        padding-inline: 60px;
+    } 
+
+    .preview__image {
+        max-width: 270px;
+        margin: 0 auto;
+    }
+}
+
+
+
 @media (max-width: 1024px){
     .preview {
         flex-direction: column;
