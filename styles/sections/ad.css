@@ -2,7 +2,7 @@
     /* border-radius: 32px;
     background: #EDF5FF;
     padding: 48px 64px 48px 64px; */
-    /* display: flex;
+    display: flex;
     flex-direction: row;
     gap: 24px;
     justify-content: space-between;
@@ -12,7 +12,7 @@
     /* background-repeat: no-repeat;
     background-position: right bottom;
     background-size: contain;
-    background-size: 400px; */
+    background-size: 400px;
 }
 
 .add__info {
