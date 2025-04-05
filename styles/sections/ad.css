@@ -1,16 +1,19 @@
 .test__content {
     border-radius: 32px;
-    background: #EDF5FF url('/img/ad/ad_image.png') no-repeat right bottom;
-    padding: 48px 64px;
+    background: #EDF5FF;
+    padding: 48px 64px 48px 64px;
     display: flex;
     flex-direction: row;
     gap: 24px;
     justify-content: space-between;
-    width: 100%;
-    min-height: 300px;
+    width: 100%; 
+    position: relative;
+    background-image: url('/img/ad/ad_image.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
     background-size: contain;
-}
-
+    background-size: 400px;
+} 
 
 .test__info {
     padding-bottom: 48px;
