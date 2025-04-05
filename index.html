@@ -642,23 +642,34 @@
 
     <section class="videos" id="videos">
         <h2 class="default__title">Отзывы участников</h2>
-        <div class="video__reviews">
-            <div class="video__review-wrapper slide slide-prev" data-video="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video1.mp4">
-                <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video1.png" class="video__review" alt="Отзыв 1">
-                <div class="gradient"></div>
-            </div>
-            <div class="video__review-wrapper slide slide-active" data-video="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video2.mp4">
-                <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video2.png" class="video__review" alt="Отзыв 2">
-                <div class="gradient"></div>
+        <!-- <div class="slider-container"> -->
+            
+            <div class="video__reviews">
+                <div class="video__review-wrapper slide-prev" data-video="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video1.mp4">
+                    <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video1.png" class="video__review" alt="Отзыв 1">
+                    <div class="gradient"></div>
+                    <img  src="./img/Button.png" class="video__watch video__watch-side" alt="Смотреть видео">
+                </div>
+                <div class="video__review-wrapper slide-active" data-video="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video2.mp4">
+                    <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video2.png" class="video__review" alt="Отзыв 2">
+                    <div class="gradient"></div>
+                    <img src="./img/Button.png" class="video__watch" alt="Смотреть видео">
+                </div>
+                <div class="video__review-wrapper slide-next" data-video="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video3.mov">
+                    <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video3.png" class="video__review" alt="Отзыв 3">
+                    <div class="gradient"></div>
+                    <img src="./img/Button.png" class="video__watch video__watch-side" alt="Смотреть видео">
+                </div>
             </div>
 
-            <div class="video__review-wrapper slide slide-next" data-video="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video3.mov">
-                <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video3.png" class="video__review" alt="Отзыв 3">
-                <div class="gradient"></div>
+            <div class="slider-nav">
+                <button class="slider-arrow slider-arrow--prev">←</button>
+                <div class="slider-nav__dot active"></div>
+                <div class="slider-nav__dot"></div>
+                <div class="slider-nav__dot"></div>
+                <button class="slider-arrow slider-arrow--next">→</button>
             </div>
-            <img src="./img/Button.png" class="video__watch" alt="Смотреть видео">
-        </div>
-          
+        <!-- </div> -->
     </section>
     
 
@@ -872,48 +883,8 @@
 <script src="./script/accordion.js"></script>
 <script src="./script/calculate.js"></script>
 <script src="./script/blog.js"></script>
+<script src="./script/videos.js"></script>
 <script>
-
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".video__review-wrapper").forEach(wrapper => {
-        wrapper.addEventListener("click", function () {
-            const videoSrc = this.getAttribute("data-video");
-            const modal = document.getElementById("videoModal");
-            const modalVideo = document.getElementById("modalVideo");
-
-            if (!videoSrc) {
-                console.error("Ошибка: data-video отсутствует.");
-                return;
-            }
-
-            modal.style.display = "flex";
-            document.body.classList.add('no-scroll');
-            modalVideo.src = videoSrc;
-            modalVideo.play();
-        });
-    });
-
-    document.querySelector(".modal .close").addEventListener("click", function () {
-        const modal = document.getElementById("videoModal");
-        const modalVideo = document.getElementById("modalVideo");
-
-        modal.style.display = "none";
-        document.body.classList.add('no-scroll');
-        modalVideo.pause();
-        modalVideo.src = "";
-    });
-
-    document.getElementById("videoModal").addEventListener("click", function (e) {
-        if (e.target === this) {
-            this.style.display = "none";
-            const modalVideo = document.getElementById("modalVideo");
-            modalVideo.pause();
-            modalVideo.src = "";
-        }
-    });
-});
-
-
     document.getElementById("year").textContent = new Date().getFullYear();
 
     function scrollToTop() {
