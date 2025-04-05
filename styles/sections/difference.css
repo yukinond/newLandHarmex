@@ -28,6 +28,10 @@
     display: flex;
     gap: 24px;
 }
+
+.difference__card-double .difference__container{
+    width: 50%;
+}
 .difference__card-solo{
     display: flex;
     margin: 0 auto;
@@ -40,6 +44,7 @@
     height: 418px;
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
 .difference__card-info{
