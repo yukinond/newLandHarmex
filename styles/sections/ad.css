@@ -7,12 +7,12 @@
     gap: 24px;
     justify-content: space-between;
     width: 100%;
-    position: relative;
+    /* position: relative; */
     /* background-image: url('../../img/ad/ad_image.png'); */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-position: right bottom;
     background-size: contain;
-    background-size: 400px;
+    background-size: 400px; */
 }
 
 .add__info {
