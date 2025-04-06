@@ -1134,7 +1134,7 @@ select option[value=""] {
     border-radius: 24px;
     /* counter-reset: step-counter; */
     overflow: hidden;
-    height: 328px;
+    min-height: 328px;
 }
 
 .work__step-title {
@@ -2274,7 +2274,7 @@ select option[value=""] {
       }
   
       .work__steps {
-          grid-template-columns: repeat(1, minmax(0, 1fr));
+          grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
       }
   
       .tryIt__text {
@@ -2396,6 +2396,10 @@ select option[value=""] {
 
 
 @media (max-width: 480px){
+    .toggle-btn {
+        padding: 6px 6px;
+    }
+
     .difference {
         padding-inline: 0px;
     }
@@ -2431,7 +2435,7 @@ select option[value=""] {
 
     .footer__top {
         display: grid;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-columns: repeat(1, minmax(0, 1fr)) ;
     }
 
     .footer__links:last-child {
