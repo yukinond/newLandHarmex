@@ -2396,6 +2396,14 @@ select option[value=""] {
 
 
 @media (max-width: 480px){
+    .difference {
+        padding-inline: 0px;
+    }
+
+    .difference__card {
+        padding-inline: 12px;
+    }
+
     .reviews .default__title {
         max-width: 330px;
     }
