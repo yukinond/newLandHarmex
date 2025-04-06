@@ -260,7 +260,6 @@ select option[value=""] {
     padding-inline: 10px !important;
 }
 
-/* Скрытая модалка */
 .modal {
     display: none;
     position: fixed;
