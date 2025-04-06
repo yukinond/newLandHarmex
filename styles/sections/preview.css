@@ -39,6 +39,10 @@
     margin-left: 12px;
 }
 
+.preview__image  {
+    max-width: 460px;
+}
+
 @media (min-width: 1024px) and ( max-width: 1300px) {
     .preview {
         padding-inline: 60px;
@@ -60,7 +64,7 @@
 
 @media (max-width: 768px) {
     .preview {
-        padding-top: 20px;
+        padding-top: 40px;
     }
 
     .preview__buttons{
