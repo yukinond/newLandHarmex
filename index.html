@@ -28,34 +28,39 @@
             <a class="header__link" href="#tariffs">Стоимость</a>
         </nav>
         <div class="header__actions">
-            <div class="header__socials">
-                <a href="https://wa.me/your_number" target="_blank" class="header__social header__social--whatsapp">
-                    <img loading="lazy" src="./img/contact/whatsapp.png" alt="WhatsApp">
-                </a>
-                <a href="https://t.me/your_username" target="_blank" class="header__social header__social--telegram">
-                    <img loading="lazy" src="./img/contact/telegram.png" alt="Telegram">
-                </a>
-                <a href="#" class="header__social header__social--call" id="open-callback-modal">
-                    <img loading="lazy" src="./img/contact/call.png" alt="Call">
-                </a>
-                
-                <div id="callback-modal" class="modal">
-                    <div class="modal__content">
-                    <div class="modal__header">
-                        <h2 class="modal__title">Оставьте номер, и мы вам перезвоним</h2>
-                        <button id="close-callback-modal" class="modal__close"><img src="./img/Icon.png" alt="Закрыть"></button>
-                    </div>
-                    <p class="modal__text">Мы перезвоним в течение 10 минут. Ваши данные в безопасности.</p>
-                    <input type="tel" id="phone-input" class="modal__input" maxlength="18" placeholder="+7 (___) ___-__-__">
-                    <button class="modal__button btn btn-primary" id="consultBtn">Жду звонка</button>
-                    </div>
-                </div>
+            <ul class="header__socials">
+                <li>
+                    <a href="https://wa.me/your_number" target="_blank" class="header__social header__social--whatsapp">
+                        <img loading="lazy" src="./img/contact/whatsapp.png" alt="WhatsApp">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.me/your_username" target="_blank" class="header__social header__social--telegram">
+                        <img loading="lazy" src="./img/contact/telegram.png" alt="Telegram">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="header__social header__social--call" id="open-callback-modal">
+                        <img loading="lazy" src="./img/contact/call.png" alt="Call">
+                    </a>
+                </li>
   
-            </div>
+            </ul>
            <div class="header__btns">
                 <a target="_blank" href="https://app.harmex.ru/auth" class="btn header__btn"> <img src="./img/auth.png" class="header__btn-image" alt="Войти"><span class="header__btn-text">Войти</span></a>
                 <a target="_blank" href="https://app.harmex.ru/register" class="btn btn-primary header__btn header__btn-reg">Регистрация</a>
            </div>
+        </div>
+        <div id="callback-modal" class="modal">
+            <div class="modal__content">
+            <div class="modal__header">
+                <h2 class="modal__title">Оставьте номер, и мы вам перезвоним</h2>
+                <button id="close-callback-modal" class="modal__close"><img src="./img/Icon.png" alt="Закрыть"></button>
+            </div>
+            <p class="modal__text">Мы перезвоним в течение 10 минут. Ваши данные в безопасности.</p>
+            <input type="tel" id="phone-input" class="modal__input" maxlength="18" placeholder="+7 (___) ___-__-__">
+            <button class="modal__button btn btn-primary" id="consultBtn">Жду звонка</button>
+            </div>
         </div>
     </header>
 
@@ -882,7 +887,7 @@
                         <a class="footer__link" target="_blank" href="./docs/conf_policy.pdf">Политика конфиденциальности</a>
                     </li>
                 </ul>
-                <div class="footer__links">
+                <ul class="footer__links">
                     <li>                    
                         <a class="footer__title" href="tel:8(800)5509030">8 (800) 550 90 30</a>
                     </li>
@@ -896,7 +901,7 @@
                         <a href="mailto:info@harmex.ru" class="footer__link footer__link--email">info@harmex.ru</a>
                     </li>
                     
-                </div>                    
+                </ul>                    
                 </div>
                 <div class="footer__bottom">
                     <p class="footer__text">© 
