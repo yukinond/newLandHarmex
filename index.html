@@ -12,6 +12,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" >
 
     <link rel="icon" type="image/x-icon" href="./favicon.svg" >
+    <link rel="preload" href="/fonts/Inter/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 </head>
 <body>
    <header class="header">
@@ -888,6 +890,11 @@
 <script src="./script/blog.js"></script>
 <script src="./script/videos.js"></script>
 <script>
+    window.addEventListener('load', () => {
+        document.querySelector('.reviews')?.classList.remove('loading');
+        document.querySelector('.reviews')?.classList.add('loaded');
+    });
+
     document.getElementById("year").textContent = new Date().getFullYear();
 
     function scrollToTop() {

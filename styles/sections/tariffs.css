@@ -46,7 +46,6 @@
 .tariff-table th {
     background: #F6F9FC;
     color: #222222;
-    font-family: Inter;
     font-weight: 700;
     font-size: 16px;
     line-height: 140%;
@@ -55,7 +54,6 @@
 }
 
 .tariff-table td {
-    font-family: Inter;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
@@ -157,7 +155,6 @@
   }
   
   .tariff__card-value {
-    font-family: Inter;
     font-weight: 600;
     font-size: 14px;
     line-height: 100%;
@@ -166,7 +163,6 @@
   }
   
   .tariff__card-discount {
-    font-family: Inter;
     font-weight: 500;
     font-size: 14px;
     line-height: 100%;

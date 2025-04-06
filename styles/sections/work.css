@@ -42,7 +42,6 @@
 .work__step-title {
     position: relative;
     padding-left: 20px;
-    font-family: Inter;
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
@@ -77,7 +76,6 @@
 
 .work__step-description {
     color: #697696;
-    font-family: Inter;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;

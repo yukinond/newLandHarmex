@@ -2,6 +2,7 @@
     flex-direction: column;
     color: #282F3D;
     overflow: hidden;
+    min-height: 600px; 
 }
 
 .reviews__header {
@@ -237,7 +238,6 @@
 
 .reviews__content--card__title {
     color: #282F3D;
-    font-family: Inter;
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
@@ -258,7 +258,6 @@
 
 .reviews__content--card__span {
     color: #282F3D;
-    font-family: Inter;
     font-weight: 700;
     font-size: 58px;
     line-height: 72px;
@@ -284,6 +283,14 @@
 .slider::before {
     left: 0;
     top: 0;
+}
+
+.reviews.loading .slider__track {
+    animation: none;
+  }
+  
+.reviews.loaded .slider__track {
+animation: slide 40s linear infinite;
 }
 
 @media (min-width: 1024px) {
@@ -325,8 +332,7 @@
     }
 
     .reviews__card-value {
-        font-family: Inter;
-        font-weight: 700;
+            font-weight: 700;
         font-size: 48px;
         line-height: 100%;
         vertical-align: middle;
